@@ -1,10 +1,10 @@
 
-import { Route, Routes } from "react-router-dom";
-import AuthGuard from "./components/AuthGuard";
 import ProtectedRoutes from "@/components/protectedRoute";
 import Index from "@/pages/index";
 import Login from "@/pages/Login";
 import PageNotFound from "@/pages/page-not-found";
+import { Route, Routes } from "react-router-dom";
+import AuthGuard from "./components/AuthGuard";
 import UserReset from "./pages/user-reset";
 import Users from "./pages/users";
 
@@ -30,6 +30,7 @@ export default function App() {
       >
         <Route path="/index" element={<Index />} />
         <Route path="/users" element={<Users />} />
+        
       </Route>
 
       <Route path="*" element={<PageNotFound />} />

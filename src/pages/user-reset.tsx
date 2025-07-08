@@ -2,7 +2,6 @@ import Back from "@/components/back";
 import { LoadingOutlined } from "@ant-design/icons";
 import { getAuth, sendPasswordResetEmail } from "firebase/auth";
 import { motion } from "framer-motion";
-import { KeyRound } from "lucide-react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
@@ -75,7 +74,7 @@ export default function UserReset() {
                 gap: "0.5rem",
               }}
             >
-              <KeyRound color="saddlebrown" />
+              {/* <KeyRound color="saddlebrown" /> */}
               Reset Password
             </p>
             <p style={{ fontSize: "0.8rem", opacity: 0.75 }}>

@@ -140,9 +140,11 @@ export default function Index() {
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                   >
-                    <button
+                    <motion.button
+                    whileTap={{ scale: 0.99 }}
                       onClick={() => navigate("/users")}
                       style={{
+                      
                         fontSize: "0.75rem",
                         paddingLeft: "1rem",
                         paddingRight: "1rem",
@@ -156,7 +158,7 @@ export default function Index() {
                         <UserCog color="chocolate" width={"1rem"} />
                       
                       )}
-                    </button>
+                    </motion.button>
                   </motion.div>
                 )}
 
@@ -212,7 +214,7 @@ export default function Index() {
               />
 
               <Directive
-                onClick={() => usenavigate("/quick-links")}
+                onClick={() => usenavigate("/billing")}
                 to={"/quick-links"}
                 title={"Normal Directive"}
                 icon={<Link color="chocolate" width={"1.25rem"} />}

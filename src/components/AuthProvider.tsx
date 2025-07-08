@@ -30,6 +30,7 @@ const initialState: {
   logoutUser: () => Promise<void>;
   resetPassword: (email: string) => Promise<void>;
   updateUserData: (data: Partial<FirestoreUserData>) => Promise<void>;
+  isOnline: boolean;
 } = {
   user: null,
   userData: null,
@@ -40,6 +41,7 @@ const initialState: {
   logoutUser: async () => { throw new Error("Not implemented"); },
   resetPassword: async () => { throw new Error("Not implemented"); },
   updateUserData: async () => { throw new Error("Not implemented"); },
+  isOnline: typeof navigator !== "undefined" ? navigator.onLine : false,
 };
 
 export const AuthContext = createContext<{
@@ -52,6 +54,7 @@ export const AuthContext = createContext<{
   logoutUser: () => Promise<void>;
   resetPassword: (email: string) => Promise<void>;
   updateUserData: (data: Partial<FirestoreUserData>) => Promise<void>;
+  isOnline: boolean;
 }>(initialState);
 
 interface Props {
@@ -60,6 +63,8 @@ interface Props {
 
 const CACHED_USER_KEY = "cached_user_data";
 const CACHED_AUTH_KEY = "cached_auth_state";
+
+
 
 // Function to get initial state from cache
 const getInitialState = () => {
@@ -369,6 +374,7 @@ const AuthProvider = ({ children }: Props) => {
     logoutUser,
     resetPassword: async () => { throw new Error("Not implemented"); },
     updateUserData: async () => { throw new Error("Not implemented"); },
+    isOnline: navigator.onLine,
   };
 
   // Always provide auth context regardless of state
