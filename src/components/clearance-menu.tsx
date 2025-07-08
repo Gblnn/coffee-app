@@ -6,7 +6,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { ChevronDown, KeyRound } from "lucide-react";
+import { KeyRound } from "lucide-react";
 
 interface Props {
   value?: string;
