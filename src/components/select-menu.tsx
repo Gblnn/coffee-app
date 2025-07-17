@@ -67,16 +67,16 @@ export default function SelectMenu(props: Props) {
           </SelectItem>
           <SelectItem
             style={{ display: "flex", justifyContent: "flex-start" }}
-            value="hr"
+            value="waiter"
           >
-            HR
+            Waiter
           </SelectItem>
-          <SelectItem
+          {/* <SelectItem
             style={{ display: "flex", justifyContent: "flex-start" }}
             value="profile"
           >
             Profile
-          </SelectItem>
+          </SelectItem> */}
         </SelectGroup>
       </SelectContent>
     </Select>

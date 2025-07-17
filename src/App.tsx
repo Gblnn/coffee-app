@@ -7,6 +7,9 @@ import { Route, Routes } from "react-router-dom";
 import AuthGuard from "./components/AuthGuard";
 import UserReset from "./pages/user-reset";
 import Users from "./pages/users";
+import MenuManagement from "./pages/menu-management";
+import TableManagement from "./pages/table-management";
+import OrderTaking from "./pages/order-taking";
 
 // Initialize emailjs once outside of component
 
@@ -30,6 +33,9 @@ export default function App() {
       >
         <Route path="/index" element={<Index />} />
         <Route path="/users" element={<Users />} />
+        <Route path="/menu-management" element={<MenuManagement />} />
+        <Route path="/table-management" element={<TableManagement />} />
+        <Route path="/order-taking" element={<OrderTaking />} />
         
       </Route>
 

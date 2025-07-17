@@ -66,7 +66,7 @@ export default function ClearanceMenu(props: Props) {
             None
           </SelectItem>
 
-          <SelectItem
+          {/* <SelectItem
             style={{ display: "flex", justifyContent: "flex-start" }}
             value="Sohar Star United"
           >
@@ -77,7 +77,7 @@ export default function ClearanceMenu(props: Props) {
             value="Vale"
           >
             Vale
-          </SelectItem>
+          </SelectItem> */}
         </SelectGroup>
       </SelectContent>
     </Select>

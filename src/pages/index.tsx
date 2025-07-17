@@ -10,6 +10,7 @@ import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 import {
   Bug,
+  ChefHat,
   Crown,
   KeyRound,
   Link,
@@ -100,8 +101,8 @@ export default function Index() {
         <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
           <Back
             title="Coffee"
-            subtitle={"v1.4"}
-            icon={<img src="/coffee-white.png" style={{ width: "1.75rem" }} />}
+            subtitle={"v1.0"}
+            icon={<img src="/coffee-white.png" style={{ width: "1.5rem" }} />}
             noback
             extra={
               <div
@@ -218,6 +219,27 @@ export default function Index() {
                 to={"/quick-links"}
                 title={"Normal Directive"}
                 icon={<Link color="chocolate" width={"1.25rem"} />}
+              />
+
+
+              <Directive
+                onClick={() => usenavigate("/menu-management")}
+                to={"/menu-management"}
+                title={"Menu Management"}
+                icon={<Link color="chocolate" width={"1.25rem"} />}
+              />
+
+              <Directive
+                onClick={() => usenavigate("/table-management")}
+                to={"/table-management"}
+                title={"Table Management"}
+                icon={<span style={{fontSize:'1.25rem'}}>🍽️</span>}
+              />
+              <Directive
+                onClick={() => usenavigate("/order-taking")}
+                to={"/order-taking"}
+                title={"Order Taking"}
+                icon={<span style={{fontSize:'1.25rem'}}><ChefHat width={"1.25rem"} color="chocolate"/></span>}
               />
 
              
